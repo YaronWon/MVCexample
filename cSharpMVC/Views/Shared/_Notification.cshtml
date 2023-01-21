@@ -1,0 +1,17 @@
+﻿@if(TempData["GoodJob"] != null)
+{
+  <h2> @TempData["GoodJob"]</h2>
+      
+
+    
+}
+
+@if(TempData["Error"] != null)
+{
+    <script src="~\lib\jquery\dist\jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+    <script type="text/javascript">
+       toastr.warning('@TempData["Error"]');    
+    </script>
+}
